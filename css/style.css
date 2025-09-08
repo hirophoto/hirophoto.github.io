@@ -3,13 +3,14 @@
 ======================= */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #fdf5e6; /* warm beige background */
+  background-color: #f5f5dc; /* light beige */
   color: #333;
   margin: 0;
   padding: 0;
   line-height: 1.6;
   text-align: center;
 }
+
 
 h1 {
   font-size: 3rem;
