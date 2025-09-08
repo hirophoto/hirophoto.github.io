@@ -12,16 +12,39 @@ body {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif; /* Use same or different font for headings */
+  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   margin: 30px 0 10px 0;
-  color: #111; /* darker for stronger contrast */
+  color: #111;
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #444; /* slightly richer than before */
+  color: #444;
+}
+
+/* =======================
+   Navigation Bar Styling
+======================= */
+.navbar {
+  background-color: #e6e2d3; /* slightly darker beige */
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #8b4513; /* brownish highlight */
 }
 
 /* =======================
@@ -34,7 +57,7 @@ p {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  background-color: #fff; /* contrast against beige */
+  background-color: #fff;
 }
 
 .slides img {
@@ -73,9 +96,8 @@ p {
 .next { right: 10px; }
 
 .prev:hover, .next:hover {
-  background-color: rgba(160,120,90,0.9); /* darker warm tone on hover */
+  background-color: rgba(160,120,90,0.9);
 }
-
 
 /* =======================
    Table Styling
@@ -111,6 +133,19 @@ tfoot td {
 }
 
 /* =======================
+   About Me Text
+======================= */
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px 10px;
+}
+
+/* =======================
    Responsive Design
 ======================= */
 @media screen and (max-width: 600px) {
@@ -134,37 +169,9 @@ tfoot td {
     font-size: 20px;
     padding: 10px;
   }
-}
-
-/* =======================
-   Navigation Bar Styling
-======================= */
-.navbar {
-  background-color: #e6e2d3; /* slightly darker beige than background */
-  padding: 15px 0;
-  text-align: center;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.navbar a {
-  color: #333;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #8b4513; /* brownish highlight */
-}
-
-.about-text {
-  max-width: 800px;       /* Limit text width to 800px */
-  margin: 0 auto;         /* Centre the text horizontally */
-  text-align: justify;     /* Optional: makes text neatly aligned on both sides */
-  font-size: 1.2rem;       /* Adjust for readability */
-  line-height: 1.6;        /* Maintain comfortable spacing */
-  color: #333;             /* Ensure contrast with background */
-  padding: 20px 10px;      /* Optional: some padding for breathing room */
+  
+  .about-text {
+    padding: 15px 5px;
+    font-size: 1rem;
+  }
 }
