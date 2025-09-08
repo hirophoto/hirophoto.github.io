@@ -1,101 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hirophoto | Sydney Photographer</title>
-  <!-- Link external CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Hirophoto | Sydney Photographer</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1>Hirophoto</h1>
-  <p>Sydney-based Photographer</p>
+    <h1>Hirophoto</h1>
+    <p>Sydney-based Photographer</p>
 
-  <!-- Image Carousel -->
-  <div class="carousel">
-    <div class="slides">
-      <img src="images/photo1.jpg" alt="Photo 1" class="active">
-      <img src="images/photo2.jpg" alt="Photo 2">
-      <img src="images/photo3.jpg" alt="Photo 3">
-      <img src="images/photo4.jpg" alt="Photo 4">
+    <div class="carousel">
+        <div class="slides">
+            <img src="images/photo1.jpg" alt="Photo 1" class="active">
+            <img src="images/photo2.jpg" alt="Photo 2">
+            <img src="images/photo3.jpg" alt="Photo 3">
+            <img src="images/photo4.jpg" alt="Photo 4">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
     </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </div>
 
-  <!-- Disable Right-Click Script -->
-  <script>
-    document.addEventListener("contextmenu", function(e) {
-      e.preventDefault();
-      alert("Right-click is disabled.");
-    }, false);
-  </script>
+    <!-- Disable Right-Click -->
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+            alert("Right-click is disabled.");
+        }, false);
+    </script>
 
-  <!-- Table of Services -->
-  <table>
-    <thead>
-      <tr>
-        <th>Services</th>
-        <th>Description</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Portrait Session</td>
-        <td>Capture your personality, style, and emotions in high-quality portraits — perfect for personal branding, social media, or family keepsakes.</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Commercial / Product</td>
-        <td>Professional photography to showcase your products, services, or business. Ideal for marketing, e-commerce, and promotional campaigns.</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Events (excluding weddings)</td>
-        <td>Document your events with a creative and unobtrusive approach. From corporate functions to private parties, we capture the moments that matter.</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Weddings</td>
-        <td>Beautiful, timeless wedding photography to preserve every special moment of your big day, from candid emotions to carefully composed shots.</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Services</th>
+                <th>Description</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Portrait Session</td>
+                <td>Capture your personality, style, and emotions in high-quality portraits — perfect for personal branding, social media, or family keepsakes.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Commercial / Product</td>
+                <td>Professional photography to showcase your products, services, or business. Ideal for marketing, e-commerce, and promotional campaigns.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Events (excluding weddings)</td>
+                <td>Document your events with a creative and unobtrusive approach. From corporate functions to private parties, we capture the moments that matter.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Weddings</td>
+                <td>Beautiful, timeless wedding photography to preserve every special moment of your big day, from candid emotions to carefully composed shots.</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 
-  <!-- Carousel JavaScript -->
-  <script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".slides img");
+    <!-- Carousel JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let currentIndex = 0;
+            const slides = document.querySelectorAll(".slides img");
 
-    function showSlide(index) {
-      slides.forEach((img, i) => {
-        img.classList.remove("active");
-        if(i === index) img.classList.add("active");
-      });
-    }
+            function showSlide(index) {
+                slides.forEach((img, i) => {
+                    img.classList.remove("active");
+                    if (i === index) img.classList.add("active");
+                });
+            }
 
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    }
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
 
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    }
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            }
 
-    // Button controls
-    document.querySelector(".next").addEventListener("click", nextSlide);
-    document.querySelector(".prev").addEventListener("click", prevSlide);
+            // Button controls
+            document.querySelector(".next").addEventListener("click", nextSlide);
+            document.querySelector(".prev").addEventListener("click", prevSlide);
 
-    // Auto-slide every 5 seconds
-    setInterval(nextSlide, 5000);
+            // Auto-slide every 5 seconds
+            setInterval(nextSlide, 5000);
 
-    // Initial display
-    showSlide(currentIndex);
-  </script>
+            // Initial display
+            showSlide(currentIndex);
+        });
+    </script>
 
 </body>
 </html>
