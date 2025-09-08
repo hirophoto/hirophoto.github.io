@@ -1,15 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Photography Website</title>
+  <title>Hirophoto | Sydney Photographer</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 30px 0 10px 0;
+      color: #222;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    /* Image Styling */
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+    }
+
+    /* Table Styling */
+    table {
+      margin: 0 auto 50px auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 1000px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #222;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tfoot td {
+      font-weight: bold;
+      background-color: #eee;
+    }
+
+    /* Right-click disabled alert styling (optional) */
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Photography</h1>
-  <p>This is my homepage.</p>
+
+  <h1>Hirophoto</h1>
+  <p>Sydney-based Photographer</p>
 
   <!-- Example photo -->
-  <img src="images/photo1.jpg" alt="My Photo" width="800">
+  <img src="images/photo1.jpg" alt="Sample Photo">
 
   <!-- Disable Right-Click Script -->
   <script>
@@ -18,6 +85,56 @@
       alert("Right-click is disabled.");
     }, false);
   </script>
+
+  <!-- Example Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Company Name</th>
+        <th>Number of Items to Ship</th>
+        <th>Next Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Adam's Greenworks</td>
+        <td>14</td>
+        <td>Package Items</td>
+      </tr>
+      <tr>
+        <td>Davie's Burgers</td>
+        <td>2</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Baker's Bike Shop</td>
+        <td>3</td>
+        <td>Send Invoice</td>
+      </tr>
+      <tr>
+        <td>Miss Sally's Southern</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Summit Resort Rentals</td>
+        <td>4</td>
+        <td>Ship</td>
+      </tr>
+      <tr>
+        <td>Strike Fitness</td>
+        <td>1</td>
+        <td>Enter Order</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>Total</td>
+        <td>28</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
 
 </body>
 </html>
