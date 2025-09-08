@@ -3,80 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Hirophoto | Sydney Photographer</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin: 30px 0 10px 0;
-      color: #222;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      color: #555;
-    }
-
-    /* Image Styling */
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      margin-bottom: 40px;
-    }
-
-    /* Table Styling */
-    table {
-      margin: 0 auto 50px auto;
-      border-collapse: collapse;
-      width: 80%;
-      max-width: 1000px;
-      background-color: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    th, td {
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #222;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    tfoot td {
-      font-weight: bold;
-      background-color: #eee;
-    }
-
-    /* Right-click disabled alert styling (optional) */
-  </style>
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <h1>Hirophoto</h1>
   <p>Sydney-based Photographer</p>
 
-  <!-- Example photo -->
-  <img src="images/photo1.jpg" alt="Sample Photo">
+  <!-- Image Carousel -->
+  <div class="carousel">
+    <div class="slides">
+      <img src="images/photo1.jpg" alt="Photo 1" class="active">
+      <img src="images/photo2.jpg" alt="Photo 2">
+      <img src="images/photo3.jpg" alt="Photo 3">
+      <img src="images/photo4.jpg" alt="Photo 4">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
 
   <!-- Disable Right-Click Script -->
   <script>
@@ -86,7 +31,7 @@
     }, false);
   </script>
 
-  <!-- Example Table -->
+  <!-- Table of Services -->
   <table>
     <thead>
       <tr>
@@ -109,7 +54,7 @@
       <tr>
         <td>Events (excluding weddings)</td>
         <td>Document your events with a creative and unobtrusive approach. From corporate functions to private parties, we capture the moments that matter.</td>
-        <td>Send Invoice</td>
+        <td></td>
       </tr>
       <tr>
         <td>Weddings</td>
@@ -117,14 +62,40 @@
         <td></td>
       </tr>
     </tbody>
-    <!-- <tfoot>
-      <tr>
-        <td>Total</td>
-        <td>28</td>
-        <td></td>
-      </tr>
-    </tfoot> -->
   </table>
+
+  <!-- Carousel JavaScript -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slides img");
+
+    function showSlide(index) {
+      slides.forEach((img, i) => {
+        img.classList.remove("active");
+        if(i === index) img.classList.add("active");
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    // Button controls
+    document.querySelector(".next").addEventListener("click", nextSlide);
+    document.querySelector(".prev").addEventListener("click", prevSlide);
+
+    // Optional: Auto-slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initial display
+    showSlide(currentIndex);
+  </script>
 
 </body>
 </html>
