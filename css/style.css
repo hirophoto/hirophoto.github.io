@@ -158,3 +158,13 @@ tfoot td {
 .navbar a:hover {
   color: #8b4513; /* brownish highlight */
 }
+
+.about-text {
+  max-width: 800px;       /* Limit text width to 800px */
+  margin: 0 auto;         /* Centre the text horizontally */
+  text-align: justify;     /* Optional: makes text neatly aligned on both sides */
+  font-size: 1.2rem;       /* Adjust for readability */
+  line-height: 1.6;        /* Maintain comfortable spacing */
+  color: #333;             /* Ensure contrast with background */
+  padding: 20px 10px;      /* Optional: some padding for breathing room */
+}
