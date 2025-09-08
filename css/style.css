@@ -2,132 +2,156 @@
    General Styles
 ======================= */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  text-align: center;
 }
 
 h1 {
-    font-size: 3rem;
-    margin: 30px 0 10px 0;
-    color: #222;
+  font-size: 3rem;
+  margin: 30px 0 10px 0;
+  color: #222;
 }
 
 p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* =======================
+   Navigation
+======================= */
+nav {
+  margin: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0073e6;
 }
 
 /* =======================
    Carousel Styling
 ======================= */
 .carousel {
-    position: relative;
-    max-width: 800px; /* This is the main container for the carousel */
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  position: relative;
+  max-width: 800px; /* Main container for carousel */
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .slides img {
-    width: 100%; /* Ensures the image fills the carousel container */
-    max-width: 800px; /* Control the image width */
-    height: auto; /* Maintains aspect ratio */
-    display: none; /* Hide all slides initially */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: none; /* Hide all slides initially */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 0 auto;
 }
 
 .slides img.active {
-    display: block; /* Show active slide */
+  display: block; /* Show active slide */
 }
 
 /* Navigation buttons */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 12px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    border: none;
-    background-color: rgba(0,0,0,0.4);
-    border-radius: 50%;
-    user-select: none;
-    transform: translateY(-50%);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border: none;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  user-select: none;
+  transform: translateY(-50%);
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.7);
 }
 
 /* =======================
    Table Styling
 ======================= */
 table {
-    margin: 0 auto 50px auto;
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 1000px;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 0 auto 50px auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 1000px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 th, td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
 }
 
 th {
-    background-color: #222;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  background-color: #222;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 tfoot td {
-    font-weight: bold;
-    background-color: #eee;
+  font-weight: bold;
+  background-color: #eee;
 }
 
 /* =======================
    Responsive Design
 ======================= */
 @media screen and (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
+  }
 
-    p {
-        font-size: 1rem;
-    }
+  p {
+    font-size: 1rem;
+  }
 
-    table {
-        width: 95%;
-    }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 
-    .carousel {
-        max-width: 95%;
-    }
+  table {
+    width: 95%;
+  }
 
-    .prev, .next {
-        font-size: 20px;
-        padding: 10px;
-    }
+  .carousel {
+    max-width: 95%;
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 10px;
+  }
 }
