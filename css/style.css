@@ -3,7 +3,7 @@
 ======================= */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: f5f5dc;
+  background-color: #fdf5e6; /* warm beige background */
   color: #333;
   margin: 0;
   padding: 0;
@@ -14,32 +14,13 @@ body {
 h1 {
   font-size: 3rem;
   margin: 30px 0 10px 0;
-  color: #222;
+  color: #111; /* darker for stronger contrast */
 }
 
 p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #555;
-}
-
-/* =======================
-   Navigation
-======================= */
-nav {
-  margin: 20px 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #222;
-  font-weight: bold;
-  margin: 0 15px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #0073e6;
+  color: #444; /* slightly richer than before */
 }
 
 /* =======================
@@ -47,25 +28,26 @@ nav a:hover {
 ======================= */
 .carousel {
   position: relative;
-  max-width: 800px; /* Main container for carousel */
+  max-width: 800px;
   margin: 40px auto;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #fff; /* contrast against beige */
 }
 
 .slides img {
   width: 100%;
   max-width: 800px;
   height: auto;
-  display: none; /* Hide all slides initially */
+  display: none;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin: 0 auto;
 }
 
 .slides img.active {
-  display: block; /* Show active slide */
+  display: block;
 }
 
 /* Navigation buttons */
@@ -79,18 +61,20 @@ nav a:hover {
   font-weight: bold;
   font-size: 24px;
   border: none;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(210,180,140,0.8); /* warm golden beige */
   border-radius: 50%;
   user-select: none;
   transform: translateY(-50%);
+  transition: background-color 0.3s ease;
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(160,120,90,0.9); /* darker warm tone on hover */
 }
+
 
 /* =======================
    Table Styling
@@ -117,7 +101,7 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
 }
 
 tfoot td {
@@ -132,14 +116,9 @@ tfoot td {
   h1 {
     font-size: 2rem;
   }
-
+  
   p {
     font-size: 1rem;
-  }
-
-  nav a {
-    display: block;
-    margin: 10px 0;
   }
 
   table {
