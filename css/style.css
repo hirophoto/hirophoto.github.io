@@ -25,32 +25,26 @@ p {
 }
 
 /* =======================
-   Navbar Styling
+   Navigation Bar Styling
 ======================= */
 .navbar {
-  background-color: #e6e2d3;
+  background-color: #e6e2d3; /* slightly darker beige */
   padding: 15px 0;
   text-align: center;
   font-size: 1.1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .navbar a {
   color: #333;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #8b4513;
+  color: #8b4513; /* brownish highlight */
 }
 
 /* =======================
@@ -80,6 +74,7 @@ p {
   display: block;
 }
 
+/* Navigation buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -90,7 +85,7 @@ p {
   font-weight: bold;
   font-size: 24px;
   border: none;
-  background-color: rgba(210,180,140,0.8);
+  background-color: rgba(210,180,140,0.8); /* warm golden beige */
   border-radius: 50%;
   user-select: none;
   transform: translateY(-50%);
@@ -138,7 +133,7 @@ tfoot td {
 }
 
 /* =======================
-   About Text Styling
+   About Me Text
 ======================= */
 .about-text {
   max-width: 800px;
@@ -157,8 +152,8 @@ tfoot td {
   h1 {
     font-size: 2rem;
   }
-
-  p, .about-text {
+  
+  p {
     font-size: 1rem;
   }
 
@@ -171,7 +166,12 @@ tfoot td {
   }
 
   .prev, .next {
-    font-size: 18px;
-    padding: 8px;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .about-text {
+    padding: 15px 5px;
+    font-size: 1rem;
   }
 }
