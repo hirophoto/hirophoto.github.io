@@ -60,18 +60,26 @@ p {
   background-color: #fff;
 }
 
+.slides {
+  position: relative;
+}
+
 .slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   max-width: 800px;
   height: auto;
-  display: none;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  margin: 0 auto;
 }
 
 .slides img.active {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 
 /* Navigation buttons */
@@ -90,6 +98,7 @@ p {
   user-select: none;
   transform: translateY(-50%);
   transition: background-color 0.3s ease;
+  z-index: 2;
 }
 
 .prev { left: 10px; }
