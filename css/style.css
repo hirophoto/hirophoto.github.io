@@ -31,35 +31,35 @@ header {
   width: 100%;
   padding: 10px 20px;
   background-color: #f5f5dc;
-  display: flex; /* Use flexbox to align children side-by-side */
-  align-items: center; /* Vertically aligns items in the center */
+  display: flex;
+  align-items: center;
 }
 
 header .logo {
   height: 50px;
   width: auto;
-  margin-right: 20px; /* Adds spacing between the logo and the site info */
+  margin-right: 20px;
 }
 
 .header-right {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centres the site info and navigation vertically */
-  flex-grow: 1; /* This is the key change. It forces this container to take up all remaining space */
+  flex-grow: 1;
+  text-align: center; /* This centres the site info */
 }
 
 header .site-info {
-  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* =======================
    Navigation Bar Styling
 ======================= */
 .navbar {
-  background-color: transparent;
-  padding: 0;
+  background-color: #e6e2d3; /* Corrected: Restored background color */
+  padding: 15px 0; /* Corrected: Restored padding */
   font-size: 1.1rem;
-  box-shadow: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Corrected: Restored box shadow */
   width: 100%;
 }
 
@@ -100,7 +100,7 @@ header .site-info {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 500px; /* adjust to match your photo aspect ratio */
+  height: 500px;
   margin: 0 auto;
 }
 
@@ -134,7 +134,7 @@ header .site-info {
   font-weight: bold;
   font-size: 24px;
   border: none;
-  background-color: rgba(210,180,140,0.8); /* warm golden beige */
+  background-color: rgba(210,180,140,0.8);
   border-radius: 50%;
   user-select: none;
   transform: translateY(-50%);
