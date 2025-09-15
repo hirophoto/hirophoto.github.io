@@ -30,21 +30,25 @@ p {
 header {
   width: 100%;
   padding: 10px 20px;
-  background-color: #f5f5dc; /* Match body background */
-  display: flex; /* Use flexbox for the header content */
+  background-color: #f5f5dc;
+  display: flex;
+  justify-content: space-between; /* Pushes the logo to the left and the rest of the content to the right */
   align-items: center;
-  justify-content: center; /* This centres the content horizontally */
-  flex-direction: column; /* This stacks the children vertically */
 }
 
 header .logo {
-  height: 100px;  /* size of logo */
+  height: 50px;
   width: auto;
-  margin-right: 0; /* Remove the margin on the logo since it's now stacked */
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centres the site info and navigation */
+  flex-grow: 1; /* Allows this container to take up all available space, pushing the content to the centre */
 }
 
 header .site-info {
-  /* No changes needed here, as the flexbox on the header handles the alignment */
   text-align: center;
 }
 
@@ -52,11 +56,11 @@ header .site-info {
    Navigation Bar Styling
 ======================= */
 .navbar {
-  background-color: #e6e2d3; /* slightly darker beige */
-  padding: 15px 0;
+  background-color: transparent; /* Remove the background color from the navbar */
+  padding: 0; /* Remove padding */
   font-size: 1.1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  width: 100%; /* Ensure the nav bar spans the full width below the header content */
+  box-shadow: none; /* Remove box shadow */
+  width: 100%;
 }
 
 .navbar ul {
@@ -108,14 +112,14 @@ header .site-info {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  visibility: hidden; /* New: Hides non-active images without removing them from layout */
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* New: Transition both properties */
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
   border-radius: 10px;
 }
 
 .slides img.active {
   opacity: 1;
-  visibility: visible; /* New: Makes the active image visible */
+  visibility: visible;
   z-index: 1;
 }
 
