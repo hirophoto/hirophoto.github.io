@@ -31,34 +31,35 @@ header {
   width: 100%;
   padding: 10px 20px;
   background-color: #f5f5dc;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* This aligns the content to the far left */
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  padding-bottom: 10px; /* Optional: adds a little space between the header and the nav bar */
+  display: flex; /* Use flexbox to align children side-by-side */
+  align-items: center; /* Vertically aligns items in the center */
 }
 
 header .logo {
   height: 150px;
   width: auto;
-  margin-right: 15px; /* Adds space between the logo and the text */
+  margin-right: 20px; /* Adds spacing between the logo and the site info */
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centres the site info and navigation vertically */
+  flex-grow: 1; /* This is the key change. It forces this container to take up all remaining space */
 }
 
 header .site-info {
-  text-align: left; /* Aligns the text to the left */
+  text-align: center;
 }
 
 /* =======================
    Navigation Bar Styling
 ======================= */
 .navbar {
-  background-color: #e6e2d3; /* Corrected: Restored background color */
-  padding: 15px 0; /* Corrected: Restored padding */
+  background-color: #e6e2d3;
+  padding: 15px 0;
   font-size: 1.1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Corrected: Restored box shadow */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   width: 100%;
 }
 
@@ -99,7 +100,7 @@ header .site-info {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 500px;
+  height: 500px; /* adjust to match your photo aspect ratio */
   margin: 0 auto;
 }
 
@@ -133,7 +134,7 @@ header .site-info {
   font-weight: bold;
   font-size: 24px;
   border: none;
-  background-color: rgba(210,180,140,0.8);
+  background-color: rgba(210,180,140,0.8); /* warm golden beige */
   border-radius: 50%;
   user-select: none;
   transform: translateY(-50%);
