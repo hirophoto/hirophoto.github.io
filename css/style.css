@@ -49,6 +49,53 @@ header .site-info {
   text-align: center;
 }
 
+/* =======================
+   Responsive Design
+======================= */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+  table {
+    width: 95%;
+  }
+
+  .carousel {
+    max-width: 95%;
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .about-text {
+    padding: 15px 5px;
+    font-size: 1rem;
+  }
+
+  header .logo {
+    height: 80px;   /* smaller logo for mobile */
+    top: 5px;
+    left: 10px;
+  }
+
+  header .site-info {
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
 
 /* =======================
    Navigation Bar Styling
