@@ -28,11 +28,15 @@ p {
    Header & Logo
 ======================= */
 header {
+  width: 100%;
+}
+
+header .header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* logo left-aligned */
   padding: 10px 20px;
-  flex-wrap: wrap; /* allows small screens to wrap navbar */
+  flex-wrap: wrap; /* responsive wrap on small screens */
   background-color: #f5f5dc; /* match body background */
 }
 
@@ -59,7 +63,7 @@ header .site-info {
 
 .navbar ul {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* center below header */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -94,12 +98,12 @@ header .site-info {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 500px;
+  height: 500px; /* adjust to match your photo aspect ratio */
   margin: 0 auto;
 }
 
 .slides img {
-  display: none;
+  display: none;   /* hide non-active */
   position: absolute;
   top: 0;
   left: 0;
@@ -112,7 +116,7 @@ header .site-info {
 }
 
 .slides img.active {
-  display: block;
+  display: block;  /* show the active one */
   opacity: 1;
   z-index: 1;
 }
@@ -128,7 +132,7 @@ header .site-info {
   font-weight: bold;
   font-size: 24px;
   border: none;
-  background-color: rgba(210,180,140,0.8);
+  background-color: rgba(210,180,140,0.8); /* warm golden beige */
   border-radius: 50%;
   user-select: none;
   transform: translateY(-50%);
@@ -219,16 +223,16 @@ tfoot td {
     font-size: 1rem;
   }
 
-  header {
+  /* Stack logo and site info vertically on small screens */
+  header .header-top {
     flex-direction: column;
     align-items: center;
   }
 
   header .site-info {
     padding-left: 0;
-    align-items: center;
     text-align: center;
-    margin-top: 10px; /* small spacing under logo */
+    margin-top: 10px;
   }
 
   .navbar ul {
