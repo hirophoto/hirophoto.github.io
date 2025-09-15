@@ -29,15 +29,11 @@ p {
 ======================= */
 header {
   width: 100%;
-}
-
-header .header-top {
-  display: flex;
+  padding: 10px 20px; /* Add padding here instead of on the old header-top div */
+  background-color: #f5f5dc; /* Match body background */
+  display: flex; /* Use flexbox for the header content */
   align-items: center;
-  justify-content: flex-start; /* logo left-aligned */
-  padding: 10px 20px;
-  flex-wrap: wrap; /* responsive wrap on small screens */
-  background-color: #f5f5dc; /* match body background */
+  flex-wrap: wrap; /* Responsive wrap on small screens */
 }
 
 header .logo {
@@ -47,7 +43,7 @@ header .logo {
 }
 
 header .site-info {
-  display: inline-block;
+  /* No changes needed here, as the flexbox on the header handles the alignment */
   text-align: left;
 }
 
@@ -59,6 +55,7 @@ header .site-info {
   padding: 15px 0;
   font-size: 1.1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%; /* Ensure the nav bar spans the full width below the header content */
 }
 
 .navbar ul {
@@ -223,14 +220,13 @@ tfoot td {
     font-size: 1rem;
   }
 
-  /* Stack logo and site info vertically on small screens */
-  header .header-top {
+  /* For small screens, stack logo and site info vertically */
+  header {
     flex-direction: column;
     align-items: center;
   }
 
   header .site-info {
-    padding-left: 0;
     text-align: center;
     margin-top: 10px;
   }

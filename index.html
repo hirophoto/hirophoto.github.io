@@ -10,15 +10,12 @@
 <body>
 
 <header>
-  <div class="header-top">
-    <img src="images/logo.png" alt="Hirophoto Logo" class="logo">
-    <div class="site-info">
-      <h1>Hirophoto</h1>
-      <p>Sydney-based Photographer</p>
-    </div>
+  <img src="images/logo.png" alt="Hirophoto Logo" class="logo">
+  <div class="site-info">
+    <h1>Hirophoto</h1>
+    <p>Sydney-based Photographer</p>
   </div>
 
-  <!-- Navigation Bar -->
   <nav class="navbar">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -28,10 +25,7 @@
   </nav>
 </header>
 
-</header>
-
 <main>
-    <!-- Image Carousel -->
     <div class="carousel">
         <div class="slides">
             <img src="images/photo1.jpg" alt="Photo 1" class="active">
@@ -45,7 +39,6 @@
         <button class="next">&#10095;</button>
     </div>
 
-    <!-- Table of Services -->
     <table>
         <thead>
             <tr>
@@ -79,7 +72,6 @@
     </table>
 </main>
 
-<!-- Disable Right-Click -->
 <script>
     document.addEventListener("contextmenu", function(e) {
         e.preventDefault();
@@ -87,7 +79,6 @@
     }, false);
 </script>
 
-<!-- Carousel JavaScript -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         let currentIndex = 0;
