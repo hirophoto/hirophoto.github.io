@@ -14,13 +14,13 @@ body {
 h1 {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
-  margin: 0; /* adjusted for header flex layout */
+  margin: 0;
   color: #111;
 }
 
 p {
   font-size: 1.2rem;
-  margin: 0; /* adjusted for header flex layout */
+  margin: 0;
   color: #444;
 }
 
@@ -33,19 +33,19 @@ header {
   justify-content: space-between;
   padding: 10px 20px;
   flex-wrap: wrap; /* allows small screens to wrap navbar */
+  background-color: #f5f5dc; /* match body background */
 }
 
 header .logo {
-  height: 100px;  /* size of logo */
+  height: 50px;  /* size of logo */
   width: auto;
-  margin-right: 15px; /* space between logo and site title */
+  margin-right: 15px;
 }
 
 header .site-info {
   display: inline-block;
   text-align: left;
 }
-
 
 /* =======================
    Navigation Bar Styling
@@ -94,12 +94,12 @@ header .site-info {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 500px; /* adjust to match your photo aspect ratio */
+  height: 500px;
   margin: 0 auto;
 }
 
 .slides img {
-  display: none;   /* hide non-active */
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -112,7 +112,7 @@ header .site-info {
 }
 
 .slides img.active {
-  display: block;  /* show the active one */
+  display: block;
   opacity: 1;
   z-index: 1;
 }
@@ -128,7 +128,7 @@ header .site-info {
   font-weight: bold;
   font-size: 24px;
   border: none;
-  background-color: rgba(210,180,140,0.8); /* warm golden beige */
+  background-color: rgba(210,180,140,0.8);
   border-radius: 50%;
   user-select: none;
   transform: translateY(-50%);
@@ -228,5 +228,11 @@ tfoot td {
     padding-left: 0;
     align-items: center;
     text-align: center;
+    margin-top: 10px; /* small spacing under logo */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
   }
 }
