@@ -31,21 +31,21 @@ header {
   width: 100%;
   padding: 10px 20px;
   background-color: #f5f5dc;
-  display: flex;
-  justify-content: space-between; /* Pushes the logo to the left and the rest of the content to the right */
-  align-items: center;
+  display: flex; /* Use flexbox to align children side-by-side */
+  align-items: center; /* Vertically aligns items in the center */
 }
 
 header .logo {
   height: 50px;
   width: auto;
+  margin-right: 20px; /* Adds spacing between the logo and the site info */
 }
 
 .header-right {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centres the site info and navigation */
-  flex-grow: 1; /* Allows this container to take up all available space, pushing the content to the centre */
+  align-items: center; /* Centres the site info and navigation vertically */
+  flex-grow: 1; /* This is the key change. It forces this container to take up all remaining space */
 }
 
 header .site-info {
@@ -56,16 +56,16 @@ header .site-info {
    Navigation Bar Styling
 ======================= */
 .navbar {
-  background-color: transparent; /* Remove the background color from the navbar */
-  padding: 0; /* Remove padding */
+  background-color: transparent;
+  padding: 0;
   font-size: 1.1rem;
-  box-shadow: none; /* Remove box shadow */
+  box-shadow: none;
   width: 100%;
 }
 
 .navbar ul {
   display: flex;
-  justify-content: center; /* center below header */
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
