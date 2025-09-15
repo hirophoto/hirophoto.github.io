@@ -32,26 +32,23 @@ header {
   padding: 10px 20px;
   background-color: #f5f5dc;
   display: flex;
-  justify-content: space-between; /* Aligns logo to the left, and header-right to the right */
   align-items: center;
+  justify-content: center; /* centres the texts */
+  position: relative; /* allows absolute positioning of logo */
 }
 
 header .logo {
-  height: 150px;
+  height: 120px;
   width: auto;
-  margin-right: 20px;
-}
-
-.header-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centres the site info and navigation */
-  flex-grow: 1; /* This is the key change. It forces this container to take up all remaining space */
+  position: absolute;
+  top: 10px;
+  left: 20px; /* keeps logo at top-left corner */
 }
 
 header .site-info {
   text-align: center;
 }
+
 
 /* =======================
    Navigation Bar Styling
