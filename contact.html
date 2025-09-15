@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Me | Hirophoto</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Contact Me | Hirophoto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-    <h1>Hirophoto</h1>
-    <p>Sydney-based Photographer</p>
+<header>
+  <div class="header-content">
+    <img src="images/logo.png" alt="Hirophoto Logo" class="logo">
+    <div class="site-info">
+      <h1>Hirophoto</h1>
+      <p>Sydney-based Photographer</p>
+    </div>
+  </div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="index.html">Home</a> |
-      <a href="about.html">About Me</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch for photography bookings, collaborations, or questions, please use the form below:</p>
+<main>
+  <h2>Contact Me</h2>
+  <p>If you'd like to get in touch for photography bookings, collaborations, or questions, please use the form below:</p>
 
-    <!-- Google Form Embed -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-gLO6JPMyFuUiiNAo0wrfbmQElAI6sK3uhNLDTH6UomL8ow/viewform?usp=header" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-gLO6JPMyFuUiiNAo0wrfbmQElAI6sK3uhNLDTH6UomL8ow/viewform?usp=header" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-    <p><a href="index.html">← Back to Home</a></p>
+  <p><a href="index.html">← Back to Home</a></p>
+</main>
+    
+<script>
+    document.addEventListener("contextmenu", function(e) {
+        e.preventDefault();
+        alert("Right-click is disabled.");
+    }, false);
+</script>
 
 </body>
 </html>

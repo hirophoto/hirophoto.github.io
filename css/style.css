@@ -38,7 +38,7 @@ header {
 }
 
 header .logo {
-  height: 50px;  /* size of logo */
+  height: 100px;  /* size of logo */
   width: auto;
   margin-right: 0; /* Remove the margin on the logo since it's now stacked */
 }
