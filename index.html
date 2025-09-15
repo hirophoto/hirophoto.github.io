@@ -106,6 +106,7 @@
         document.querySelector(".next").addEventListener("click", nextSlide);
         document.querySelector(".prev").addEventListener("click", prevSlide);
 
+        // This line is unchanged, as the CSS handles the transition
         setInterval(nextSlide, 4000); // auto-slide
         showSlide(currentIndex);       // initial display
     });
