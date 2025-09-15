@@ -108,12 +108,14 @@ header .site-info {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  visibility: hidden; /* New: Hides non-active images without removing them from layout */
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* New: Transition both properties */
   border-radius: 10px;
 }
 
 .slides img.active {
   opacity: 1;
+  visibility: visible; /* New: Makes the active image visible */
   z-index: 1;
 }
 
