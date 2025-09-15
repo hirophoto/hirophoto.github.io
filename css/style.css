@@ -29,22 +29,23 @@ p {
 ======================= */
 header {
   width: 100%;
-  padding: 10px 20px; /* Add padding here instead of on the old header-top div */
+  padding: 10px 20px;
   background-color: #f5f5dc; /* Match body background */
   display: flex; /* Use flexbox for the header content */
   align-items: center;
-  flex-wrap: wrap; /* Responsive wrap on small screens */
+  justify-content: center; /* This centres the content horizontally */
+  flex-direction: column; /* This stacks the children vertically */
 }
 
 header .logo {
   height: 50px;  /* size of logo */
   width: auto;
-  margin-right: 15px;
+  margin-right: 0; /* Remove the margin on the logo since it's now stacked */
 }
 
 header .site-info {
   /* No changes needed here, as the flexbox on the header handles the alignment */
-  text-align: left;
+  text-align: center;
 }
 
 /* =======================
@@ -220,7 +221,6 @@ tfoot td {
     font-size: 1rem;
   }
 
-  /* For small screens, stack logo and site info vertically */
   header {
     flex-direction: column;
     align-items: center;
